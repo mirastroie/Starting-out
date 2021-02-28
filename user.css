@@ -1,0 +1,450 @@
+
+/*General styling*/
+@import url('https://fonts.googleapis.com/css?family=Heebo|Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500i,800,800i,900&display=swap');
+body, html
+{
+    margin:0;
+    padding:0;
+    background-color: none;
+}
+*{margin:0;padding:0;}
+body
+{
+    font-size: 100%;
+    overflow: hidden;
+}
+
+/* Constructing the main grid */
+.main-container{
+  
+    display: grid;
+    
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-areas: 
+      "header header header"
+      "page-content page-content page-content"
+      "footer  footer  footer"
+    ;
+
+}
+
+footer
+{
+    grid-area: footer;
+    background-color:#D8C0A8;
+    
+}
+#page-content
+{
+    grid-area: page-content;
+    background-color: none;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+    /* display: flex;
+    justify-content: center; */
+  
+}
+/* Styling the loading content */
+#loading
+{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    top:0;
+    left:0;
+    z-index: 4;
+    justify-content: center;
+    align-items: center;
+    /* transition: display 0.4s ease-in-out; */
+}
+.disable
+{
+    display: none;
+}
+#loading-text
+{
+    margin-left: 5vw;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.9rem;
+    opacity: 0.92;
+    text-shadow: 2px 2px 30px #000000;
+    position: absolute;
+    /* z-index: 10062;; */
+}
+#canvas
+{
+   
+  
+    position: absolute;
+    z-index: 10062;
+}
+h1
+{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.9rem;
+    opacity: 0.92;
+    text-shadow: 2px 2px 30px #000000;
+    padding-top: 55vh;
+    padding-left: 20vw;
+     position: absolute;
+    z-index: 1;
+}
+.image-container
+{
+    position: relative;
+    z-index:-1;
+    height: 70vh;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: center; */
+
+}
+.image-container img
+{
+    width:100%;
+    height:auto;
+    background-color: black;
+    margin-top: -10%;
+   
+}
+#page-content h2
+{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-left: 13vw;
+    
+}
+h5
+{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1.8em;
+    margin-bottom: 10vh;
+}
+
+h2
+{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 3rem;
+    opacity: 0.92;
+    text-shadow: 2px 2px 30px #000000;
+    padding-top: 50vh;
+    padding-left: 100px;
+    position: absolute;
+    z-index: 1;
+   
+}
+h3{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.14rem;
+    opacity: 0.92;
+    text-shadow: 2px 2px 30px #000000;
+    padding-top: 57vh;
+    padding-left: 250px;
+    position: absolute;
+    z-index: 1;
+   
+}
+#welcome-msg
+{
+  
+    margin-top: 20vh;
+    margin-left:20vw;
+    margin-right: 20vw;
+    margin-bottom: 10vh;
+    font-family: 'Heebo', sans-serif;
+    text-align: justify;
+    
+}
+
+#end-msg
+{
+  
+    margin-top: 5vh;
+    margin-left:20vw;
+    margin-right: 20vw;
+    margin-bottom: 10vh;
+    font-family: 'Heebo', sans-serif;
+    text-align: justify;
+    
+}
+
+#show-yourself a
+{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+}
+.rcmd
+{
+    height: 300px;
+    background-color: black;
+    margin: 10px;
+}
+.recc-container
+{
+    text-align: center;
+    margin-bottom: 20vh;
+   
+}
+h6:nth-child(1)
+{
+    
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1rem;
+}
+h6:nth-child(2), h6:nth-child(3)
+{
+    
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.7rem;
+}
+.recc-container p
+{
+    margin-top: 30px;
+    font-family: 'Heebo', sans-serif;
+    text-align: justify;
+    font-size: 0.7rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+}
+.recc-container a
+{
+    color: black;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.6rem;
+    
+}
+.recc-container a:hover
+{
+    cursor: pointer;
+}
+
+.first
+{
+    
+    transition: all .7s ease-out;
+    opacity: 0;
+ 
+}
+.second
+{
+    
+    transition: all .7s ease-out;
+    
+    opacity: 0;
+}
+.third
+{
+   
+    transition: all .7s ease-out;
+    opacity: 0;
+}
+.active
+{
+    opacity: 1;
+  
+}
+#show-yourself
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    grid-gap: 5px;
+  
+    /* overflow: hidden; */
+}
+/* Styling the Header */
+header
+{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    position: relative;
+    z-index: 6;
+
+}
+#logo
+{
+    width: 60px;
+    height: auto;
+    margin: 10px;
+
+}
+#logo-container
+{
+    display: inline-block;
+    text-decoration: none;
+}
+/* Styling the navigation-bar */
+nav
+{
+    /* creates a space with zero width */
+    font-size: 0;
+    display: inline-block;
+    background-color: white;
+    position: sticky;
+
+}
+.nav-line a
+{
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+    
+}
+.nav-line > li
+{
+    display:inline-block;
+    list-style-type: none;
+    background-color: white;
+    padding: 1.4rem;
+    
+}
+.nav-line li ul
+{
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    visibility: 0;
+    cursor: pointer;
+    background-color: white;
+    margin-top: 1.4rem;
+    margin-left: -1.4rem;
+}
+.nav-line > li:hover, .dropdown > li:hover
+{
+    background-color: 	gainsboro;
+
+}
+.nav-line li:hover ul,
+ .nav-line li ul:hover
+{
+    
+    display: block;
+    visibility: visible;
+    
+}
+ul.nav-line ul li
+{
+    background-color: white;
+    padding: 0.7rem;
+}
+/* Book Now Button */
+.button{
+    background-color: white;
+    border: 2px solid 	indigo;
+    color: black;
+    text-align: center;
+    padding: 0.7rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 30px;
+    cursor: pointer;
+    width: 80px;
+    height: 16px;
+    font-size: 0.89rem;
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+/* Styling the footer */
+.footer-text-container
+{
+    display:grid;
+    grid-template-columns:  20vw repeat(7,1fr) 20vw;
+    grid-template-rows: repeat(5,10vh) 10vh;
+    justify-content: center;
+
+}
+.footer-text-container h4
+{
+    grid-column: 5/-1;
+    grid-row: 2/3;
+    font-family: 'Heebo', sans-serif;
+  
+}
+.footer-text-container p
+{
+    grid-column: 5/-1;
+    grid-row: 3/-2;
+    font-family: 'Heebo', sans-serif;
+    text-align: justify;
+}
+.footer-text-container h4:nth-child(4)
+{
+    grid-column: 8/-1;
+    grid-row: 2/3;
+    font-family: 'Heebo', sans-serif;
+  
+}
+footer ul
+{
+
+    grid-row:3/-2;
+    grid-column:8/-1;
+    list-style-type: none;
+}
+#footer-logo
+{
+    grid-row:3/-2;
+    grid-column: 2/6;
+}
+#footer-logo img
+{
+    height:120px;
+    width: auto;
+}
+footer li
+{
+    float:left;
+    padding:0 2px;
+}
+footer img[src*="social"]
+{
+    width:30px;
+    height: auto;
+}
+@media (max-width: 800px) {
+    html { background:black }
+    #page-content h1, #page-content p, #page-content a,
+    #page-content h2, #page-content h3, #page-content h4
+    {
+        color:white;
+    }
+  }
+

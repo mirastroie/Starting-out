@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<new>
+<reccomandation>
+<name>Six Senses Douro Valley</name>
+<location>Portugal, Lamego</location>
+<time>LOCAL TIME 10:07 PM </time>
+<description>
+This beautifully renovated and reimagined 19th-century manor house is set high
+ on a hill overlooking the vine-covered countryside of the Douro Valley and the
+  river below. From the dreamily-designed and furnished rooms and suites 
+to the expansive spa, fine and wholesome wining and dining, organic gardens 
+and nature trails, this is where well-being meets pure joy.
+</description>
+<redirect XML-LINK="LINK" HREF="https://www.sixsenses.com/en/resorts/douro-valley">More about us</redirect>
+</reccomandation>
+
+<reccomandation>
+<name>Six Senses Zighy Bay</name>
+<location>Oman, Musandam Peninsula</location>
+<time>LOCAL TIME 1:08 AM</time>
+<description>Nestled in Oman’s dramatic Musandam Peninsula, where rugged mountains dive into vibrant
+ emerald waters, across a powdery sand beach, the village-inspired resort offers a range of villas,
+  suites and beachfront retreats, each with a private pool, traditional summer house and the time 
+  and space to find yourself. There’s something for everyone including 
+eclectic dining featuring local and international cuisine, an award-winning spa and a plethora of unique experiences.</description>
+
+<redirect XML-LINK="LINK" HREF="https://www.sixsenses.com/en/resorts/zighy-bay">More about us</redirect>
+</reccomandation>
+
+<reccomandation>
+<name>Six Senses Fiji</name>
+<location>Fiji, Malolo Island</location>
+<time>LOCAL TIME 9:10 AM </time>
+<description>Sublime Malolo Island is the tropical setting for Six Senses Fiji, only 16 miles (25 kilometers) 
+from Nadi International Airport (NAN). Surrounded by crystal clear waters
+ and white sand beaches, the resort features just 24 spacious pool villas plus an inventory 
+ of residences with two to five bedrooms.</description>
+<redirect XML-LINK="LINK" HREF="https://www.sixsenses.com/en/resorts/fiji">More about us</redirect>
+</reccomandation>
+</new>

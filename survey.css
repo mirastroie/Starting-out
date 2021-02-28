@@ -1,0 +1,519 @@
+
+/*General styling*/
+@import url('https://fonts.googleapis.com/css?family=Heebo|Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Milonga&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500i,800,800i,900&display=swap');
+body, html
+{
+    margin:0;
+    padding:0;
+    /* Don't forget to change this property */
+    background-color: none;
+}
+*{margin:0;padding:0;}
+body
+{
+    font-size: 100%;
+}
+
+/* Constructing the main grid */
+.main-container{
+  
+    display: grid;
+    /* Don't forget to change the px value */
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-areas: 
+      "header header header"
+      "page-content page-content page-content"
+      "footer  footer  footer"
+    ;
+
+}
+footer
+{
+    grid-area: footer;
+    background-color:#D8C0A8;
+    /*Just for this page*/
+    margin-bottom: -70px;
+    
+}
+#page-content
+{
+    grid-area: page-content;
+    background-color: none;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+/* Styling the Header */
+header
+{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    position:sticky;
+    z-index: 2;
+    top:0;
+
+}
+#logo
+{
+    width: 60px;
+    height: auto;
+    margin: 10px;
+
+}
+#logo-container
+{
+    display: inline-block;
+    text-decoration: none;
+}
+/* Styling the navigation-bar */
+nav
+{
+    /* creates a space with zero width */
+    font-size: 0;
+    display: inline-block;
+    background-color: white;
+    
+
+}
+.nav-line a
+{
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+    
+}
+.nav-line > li
+{
+    display:inline-block;
+    list-style-type: none;
+    background-color: white;
+    /* same as the one below */
+    padding: 1.4rem;
+    
+}
+.nav-line li ul
+{
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    visibility: 0;
+    cursor: pointer;
+    background-color: white;
+    margin-top: 1.4rem;
+    margin-left: -1.4rem;
+}
+.nav-line > li:hover, .dropdown > li:hover
+{
+    background-color: 	gainsboro;
+
+}
+.nav-line li:hover ul,
+ .nav-line li ul:hover
+{
+    
+    display: block;
+    visibility: visible;
+    
+}
+ul.nav-line ul li
+{
+    background-color: white;
+    padding: 0.7rem;
+}
+/* Book Now Button */
+.button{
+    background-color: white;
+    border: 2px solid 	indigo;
+    color: black;
+    text-align: center;
+    padding: 0.7rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 30px;
+    cursor: pointer;
+    width: 80px;
+    height: 16px;
+    font-size: 0.89rem;
+    font-family: 'Playfair Display', serif;
+    position: sticky;
+    top:0;
+}
+
+.image-container
+{
+    position: relative;
+    z-index:-1;
+    height: 70vh;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: center; */
+
+}
+.image-container img
+{
+    width:100%;
+    height:auto;
+    background-color: black;
+   
+}
+#page-content h2
+{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1.8em;
+    margin-left: 10vw;
+    margin-bottom: 50px;
+    
+}
+.form-container
+{
+    
+    margin-bottom: 20vh;
+    display: flex;
+    /* margin-left:auto;
+    margin-right:auto; */
+    justify-content: center;
+    align-content: center;
+    padding: 100px;
+    
+
+    
+}
+
+.form-container > div
+{
+   border: 1px solid grey; 
+    padding: 50px 100px;
+
+}
+.form-container label, legend, .form-container p
+{
+   
+    font-family: 'Raleway', sans-serif;
+    padding: 7px;
+
+}
+
+legend 
+{
+    color: indigo;
+    font-weight: 600;
+}
+fieldset { 
+    border:1px solid lightgray;
+    margin: 10px;
+    padding:30px;
+   }
+#check, #survey
+{
+    
+    
+    padding: 40px 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+h2
+{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 3rem;
+    opacity: 0.92;
+    text-shadow: 2px 2px 30px #000000;
+    padding-top: 50vh;
+    padding-left: 100px;
+    position: absolute;
+    z-index: 1;
+   
+}
+h3{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.14rem;
+    opacity: 0.92;
+    text-shadow: 2px 2px 30px #000000;
+    padding-top: 57vh;
+    padding-left: 250px;
+    position: absolute;
+    z-index: 1;
+   
+}
+input[type="text"],input[type="date"], input[type="submit"],input[type="radio"],textarea,button{
+
+    /* appearance: none; */
+    box-sizing: border-box;
+    padding:10px;
+    border: 1px solid #eee;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);
+    transition: .3s box-shadow;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    font-family: 'Playfair Display', serif;
+    
+}
+input[type = "radio"]
+{
+    margin: 2px 15px;
+}
+input[type ="submit"], button
+{
+    background-color: indigo;
+    color: white;
+    width: 30%;
+    display: block;
+    position:relative;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 10px;
+}
+input:hover{
+
+    box-shadow:0 0 4px rgba(0,0,0,0.5);
+    
+}
+input:focus{
+
+  outline: none;
+    
+}
+.question,  label > input 
+{
+    margin: 6px 0;
+    display: inline-block;
+}
+#last-question 
+{
+    width: 100%;
+}
+label > textarea
+{
+    display: block;
+    margin-top: 7%;
+    position: relative;
+    margin-right:auto;
+    margin-left:auto;
+}
+.message-container
+{
+    width: 100%;
+    overflow: hidden;
+    position: sticky;
+    bottom: 0;
+    z-index: 4;
+    background-color:blueviolet;
+    grid-column: 1/-1;
+    height: 70px;
+    visibility: hidden;
+   
+}
+#message
+{
+    position: relative;
+    z-index: 4;
+    padding:  20px;
+    width: 98vw;
+    background-color: blueviolet;
+    
+    
+}
+#survey-p
+{
+    display: block;
+    position: relative;
+    margin-left:auto;
+    margin-right:  auto;
+    padding-top: 10vh;
+    text-align:center;
+}
+#survey-p p:nth-child(1)
+{
+    font-size: 2rem;
+    font-family: 'Playfair-Display','serif';
+}
+#survey-p p:nth-child(2)
+{
+    width: 35%;
+    display: block;
+    text-align:justify;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+#message p 
+{
+    color:white !important;
+}
+
+.note-container
+{
+    width: 100px;
+    overflow: hidden;
+    position: sticky;
+    bottom: 50px;
+    z-index: 4;
+    background-color: lightcoral;
+    grid-column: 1/-1;
+    visibility: hidden;
+     transition: all 4s ease-in; 
+   
+}
+.note
+{
+    position: relative;
+    z-index: 4;
+    padding:  20px;
+    width: 98vw;
+    background-color: blueviolet;
+  
+    
+}
+/* Styling the footer */
+.footer-text-container
+{
+    display:grid;
+    grid-template-columns:  20vw repeat(7,1fr) 20vw;
+    grid-template-rows: repeat(5,10vh) 10vh;
+    justify-content: center;
+
+}
+.footer-text-container h4
+{
+    grid-column: 5/-1;
+    grid-row: 2/3;
+    font-family: 'Heebo', sans-serif;
+  
+}
+.footer-text-container p
+{
+    grid-column: 5/-1;
+    grid-row: 3/-2;
+    font-family: 'Heebo', sans-serif;
+    text-align: justify;
+}
+.footer-text-container h4:nth-child(4)
+{
+    grid-column: 8/-1;
+    grid-row: 2/3;
+    font-family: 'Heebo', sans-serif;
+  
+} 
+.dot-container
+{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-left:auto;
+  margin-right: auto;
+  padding: 10vh;
+}
+.dot-container p
+{
+
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    vertical-align: middle;
+}
+.survey-p
+{
+    margin-left: 30vw;
+    margin-right: 30vw;
+    color:black;
+    font-family: 'Raleway', sans-serif;
+}
+.dotParent
+{
+    background: blueviolet;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    position: relative;
+    transition: all .4s ease-out;
+    margin: 0 40px;
+
+}
+.dotChild
+{
+
+    position: absolute;
+    background: #D8C0A8;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0px 0px -50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s ease-in;
+    
+}
+footer ul
+{
+
+    grid-row:3/-2;
+    grid-column:8/-1;
+    list-style-type: none;
+}
+#footer-logo
+{
+    grid-row:3/-2;
+    grid-column: 2/6;
+}
+#footer-logo img
+{
+    height:120px;
+    width: auto;
+
+}
+footer li
+{
+    float:left;
+    padding:0 2px;
+}
+footer img[src*="social"]
+{
+    width:30px;
+    height: auto;
+}
+@media (max-width: 800px) {
+    html { background:black }
+    #page-content h1, #page-content p, #page-content a,
+    #page-content h2, #page-content h3, #page-content h4
+    {
+        color:white;
+    }
+  }
+
+  .particle
+  {
+         position: fixed;
+         width: 2px;
+         height: 2px;
+         background-color:white;
+         border-radius: 2px;
+         z-index: 10;
+  
+  }

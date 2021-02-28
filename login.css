@@ -1,0 +1,289 @@
+
+/*General styling*/
+@import url('https://fonts.googleapis.com/css?family=Heebo|Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500i,800,800i,900&display=swap');
+body, html
+{
+    margin:0;
+    padding:0;
+    background-color: none;
+}
+*{margin:0;padding:0;}
+body
+{
+    font-size: 100%;
+}
+
+/* Constructing the main grid */
+.main-container{
+  
+    display: grid;
+    
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-areas: 
+      "header header header"
+      "page-content page-content page-content"
+      "footer  footer  footer"
+    ;
+
+}
+
+footer
+{
+    grid-area: footer;
+    background-color:#D8C0A8;
+    
+}
+#page-content
+{
+    grid-area: page-content;
+    background-color: none;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+/* Styling the Header */
+header
+{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+}
+#logo
+{
+    width: 60px;
+    height: auto;
+    margin: 10px;
+
+}
+#logo-container
+{
+    display: inline-block;
+    text-decoration: none;
+}
+/* Styling the navigation-bar */
+nav
+{
+    /* creates a space with zero width */
+    font-size: 0;
+    display: inline-block;
+    background-color: white;
+    position: sticky;
+
+}
+.nav-line a
+{
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+    
+}
+.nav-line > li
+{
+    display:inline-block;
+    list-style-type: none;
+    background-color: white;
+    padding: 1.4rem;
+    
+}
+.nav-line li ul
+{
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    visibility: 0;
+    cursor: pointer;
+    background-color: white;
+    margin-top: 1.4rem;
+    margin-left: -1.4rem;
+}
+.nav-line > li:hover, .dropdown > li:hover
+{
+    background-color: 	gainsboro;
+
+}
+.nav-line li:hover ul,
+ .nav-line li ul:hover
+{
+    
+    display: block;
+    visibility: visible;
+    
+}
+ul.nav-line ul li
+{
+    background-color: white;
+    padding: 0.7rem;
+}
+/* Book Now Button */
+.button{
+    background-color: white;
+    border: 2px solid 	indigo;
+    color: black;
+    text-align: center;
+    padding: 0.7rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 30px;
+    cursor: pointer;
+    width: 80px;
+    height: 16px;
+    font-size: 0.89rem;
+    font-family: 'Playfair Display', serif;
+}
+/* Styling the login | register section */
+#dynamic
+{
+    height:70vh;
+    width:80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* /* float:left; */
+    display: flex; 
+    justify-content: space-evenly;
+    
+}
+form > label
+{
+   
+    font-family: 'Raleway', sans-serif;
+    padding: 15px;
+
+}
+.form-container
+{
+    margin-top: 10vh;
+    border: 1px solid grey;
+    padding: 100px;
+}
+
+input[type="text"],input[type="date"], input[type="button"],input[type="submit"],input[type="radio"],input[type="password"],textarea,button{
+
+    /* appearance: none; */
+    box-sizing: border-box;
+    padding:10px;
+    margin: 4px;
+    border: 1px solid #eee;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);
+    transition: .3s box-shadow;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    font-family: 'Playfair Display', serif;
+    
+}
+input[type="submit"], input[type="button"]
+{
+    background-color: 	indigo;
+    color: white;
+    border: none;
+}
+input:hover{
+
+    box-shadow:0 0 4px rgba(0,0,0,0.5);
+    
+}
+.input-form
+{
+    margin-bottom: 15px !important;
+}
+input:focus{
+
+  outline: none;
+    
+}
+
+h2
+{
+   
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+  
+    font-size: 1.4rem;
+    opacity: 0.92;
+   
+}
+#formReg > input,#formLogin > input
+{
+    text-align: center;
+}
+
+/* Styling the footer */
+.footer-text-container
+{
+    display:grid;
+    grid-template-columns:  20vw repeat(7,1fr) 20vw;
+    grid-template-rows: repeat(5,10vh) 10vh;
+    justify-content: center;
+
+}
+.footer-text-container h4
+{
+    grid-column: 5/-1;
+    grid-row: 2/3;
+    font-family: 'Heebo', sans-serif;
+  
+}
+.footer-text-container p
+{
+    grid-column: 5/-1;
+    grid-row: 3/-2;
+    font-family: 'Heebo', sans-serif;
+    text-align: justify;
+}
+.footer-text-container h4:nth-child(4)
+{
+    grid-column: 8/-1;
+    grid-row: 2/3;
+    font-family: 'Heebo', sans-serif;
+  
+}
+footer ul
+{
+
+    grid-row:3/-2;
+    grid-column:8/-1;
+    list-style-type: none;
+}
+#footer-logo
+{
+    grid-row:3/-2;
+    grid-column: 2/6;
+}
+#footer-logo img
+{
+    height:120px;
+    width: auto;
+}
+footer li
+{
+    float:left;
+    padding:0 2px;
+}
+footer img[src*="social"]
+{
+    width:30px;
+    height: auto;
+}
+@media (max-width: 800px) {
+    html { background:black }
+    #page-content h1, #page-content p, #page-content a,
+    #page-content h2, #page-content h3, #page-content h4
+    {
+        color:white;
+    }
+  }
+
